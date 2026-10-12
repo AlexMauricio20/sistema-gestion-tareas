@@ -14,7 +14,9 @@ jobs:
         python-version: '3.10'
         
     - name: Instalación de Librerías y Dependencias Críticas
-      run: pip install -r requirements.txt pytest pytest-cov flask
+      run: pip install pytest pytest-cov flask
+
+
       
     - name: Corrida Completa de Pruebas Unitarias e Integración
       run: pytest --cov=. test_app.py --cov-report=term-missing
